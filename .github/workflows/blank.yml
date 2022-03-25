@@ -29,10 +29,10 @@ jobs:
       - name: Run a one-line script
         run: wget http://files.dolphin.ru.com/fb_lists.gz -O fb_lists.gz
 
-      - name: Create release
-        uses: Roang-zero1/github-create-release-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+#       - name: Create release
+#         uses: Roang-zero1/github-create-release-action@master
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: Create GitHub release
         uses: Roang-zero1/github-upload-release-artifacts-action@master
         with:
