@@ -33,13 +33,8 @@ jobs:
 #         uses: Roang-zero1/github-create-release-action@master
 #         env:
 #           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      - name: Create GitHub release
-        uses: Roang-zero1/github-upload-release-artifacts-action@master
-
-        with:
-          args: fb_lists.gz
-
-          overwrite: 'true'
-          
+      - name: Release
+        uses: fnkr/github-action-ghr@v1
         env:
+          GHR_PATH: fb-lists.gz
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
