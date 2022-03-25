@@ -29,6 +29,6 @@ jobs:
       - name: Run a one-line script
         run: |
           wget http://files.dolphin.ru.com/fb_lists.gz -O fb_lists.gz
-          gh release upload v1 fb_lists.gz
+          gh release upload --clobber v1 fb_lists.gz
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
