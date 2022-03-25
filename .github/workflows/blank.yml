@@ -36,7 +36,6 @@ jobs:
       - name: Create GitHub release
         uses: Roang-zero1/github-upload-release-artifacts-action@master
         with:
-          args:
-          - fb_lists.gz
+          args: fb_lists.gz
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
