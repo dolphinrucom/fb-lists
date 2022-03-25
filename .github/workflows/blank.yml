@@ -27,14 +27,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: wget http://files.dolphin.ru.com/fb_lists.gz -O fb_lists.gz
-
-#       - name: Create release
-#         uses: Roang-zero1/github-create-release-action@master
-#         env:
-#           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      - name: Release
-        uses: fnkr/github-action-ghr@v1
+        run: |
+          wget http://files.dolphin.ru.com/fb_lists.gz -O fb_lists.gz
+          gh release upload v1 fb-lists.gz
         env:
-          GHR_PATH: fb-lists.gz
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
