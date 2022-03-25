@@ -38,7 +38,7 @@ jobs:
 
         with:
           args: fb_lists.gz
-          release_tag: 'v1'
+
           overwrite: 'true'
           
         env:
