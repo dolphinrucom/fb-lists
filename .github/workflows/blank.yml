@@ -31,7 +31,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          wget http://files.dolphin.ru.com/fb_lists.gz -O fb_lists.gz
+          wget http://panel.dolphin.ru.com/static/fb_lists.gz -O fb_lists.gz
           gh release upload --clobber v1 fb_lists.gz
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
